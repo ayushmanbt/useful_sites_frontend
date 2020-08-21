@@ -1,3 +1,13 @@
+.pageLayout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.pageContent{
+    flex-grow: 1;
+}
+
 button{
     border: none;
     outline: none;
@@ -198,8 +208,33 @@ form.container{
     width: 100%;
 }
 
+.detail_part{
+    margin-bottom: 10px;
+}
+
+.detail_part h2{
+    margin-bottom: 5px;
+}
+
 .footer{
-    text-align: center;
+    display: flex;
+    background: teal;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+}
+
+.col_white{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1rem;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.col_white:hover{
+    font-size: 1.2rem;
+    
 }
 
 .cta_container{

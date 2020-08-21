@@ -1,27 +1,37 @@
 import React from 'react'
-import EmojiComponent from '../components/EmojiComponent.js'
+
+import Icon from '@mdi/react';
+import {mdiGithub} from '@mdi/js';
 
 function About() {
     return (
         <div className="container"> 
-            <h2>About This App</h2>
-            <p>This APP is made with React in the frontend and Express at the backend. It is basically a MERN stack project to show a listing of useful sites</p>
+            <div className="detail_part">
+                <h2>About This App</h2>
+                <p>Useful sites is a MERN Stack based application where people can share a common list of useful URLs.</p>
+            </div>
 
-            <br/>
+            <h2>Some Important Links</h2>
+            <p>You are welcome to check out the source code of this application in these links:</p>
+            <div className="cta_container">
 
-            <div className="footer">
-                <p>
-                    Developed by <strong>Ayushman Bilas Thakur</strong> 
+                <a href="https://github.com/AyushmanBilasThakur/useful_sites_frontend" target="_blank" rel="noopener noreferrer" className="btn">
+                    <Icon 
+                        path={mdiGithub}
+                        size={0.7}
+                    />
                     &nbsp;
-                    <EmojiComponent emoji="📅" label="year"/>2020
-                </p>
-                
-                <p>
-                    <EmojiComponent emoji="🎨" lable="Portfolio Indicating Emoji" />  
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.ayushmanbthakur.com">
-                        Protfolio
-                    </a>
-                </p>
+                    Frontend Source Code
+                </a>
+
+                <a href="https://github.com/AyushmanBilasThakur/useful_sites_backend" target="_blank" rel="noopener noreferrer" className="btn edit">
+                    <Icon 
+                        path={mdiGithub}
+                        size={0.7}
+                    />
+                    &nbsp;
+                    Backend Source Code
+                </a>
             </div>
         </div>
     )
