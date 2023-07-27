@@ -12,7 +12,7 @@ If you just want to work with the frontend then this repo will be fine. You are 
 
 However, if you want to make some changes in the backend, then you can find the code [here](https://github.com/AyushmanBilasThakur/useful_sites_backend).
 
-The API endpoint is exposed at: [https://useful-sites.herokuapp.com](https://useful-sites.herokuapp.com)
+The API endpoint is exposed at: [https://useful-sites-backend.glitch.me/](https://useful-sites-backend.glitch.me/)
 
 You can change the URL to backend API in the `src/constants.js` with the `API_URL` constant.
 
