@@ -20,13 +20,16 @@ function TopBar() {
     //   }
     return (
         <nav>
-            <h1>Useful Sites</h1>
-             <ul>
-                 <li><NavLink to ="/" exact>Home</NavLink></li>
-                 <li><NavLink to ="/about" exact>About</NavLink></li>
-                 {/* <li><button onClick={changeTheme}><EmojiComponent emoji={theme === "light" ? "🌔" : "☀️"} label={theme}/></button></li> */}
-                 <li><ThemeToggler /></li>
-             </ul>
+            <div className="nav_wrapper">
+                <h1>Useful Sites</h1>
+                <ul>
+                    <li><NavLink to ="/" exact>Home</NavLink></li>
+                    <li><NavLink to ="/about" exact>About</NavLink></li>
+                    {/* <li><button onClick={changeTheme}><EmojiComponent emoji={theme === "light" ? "🌔" : "☀️"} label={theme}/></button></li> */}
+                    <li><ThemeToggler /></li>
+                </ul>
+            </div>
+
         </nav>
     )
 }

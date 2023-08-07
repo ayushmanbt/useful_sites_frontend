@@ -10,13 +10,14 @@ import Icon from '@mdi/react'
 import {mdiPlusBox} from '@mdi/js'
 
 
-import { getSitesFromOnline, deleteSiteFromDB } from "../reducers/site/actions"
+import { getSitesFromOnline} from "../reducers/site/actions"
 
 
 function Home() {
   // const [siteList, setSiteList] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
   const [isFormDisplayed, setIsFormDisplayed] = useState(false);
+
 
   const [editingID, setEditingID] = useState("");
 
@@ -45,7 +46,6 @@ function Home() {
               key={element._id} 
               site={element} 
               editSite = {() => {setEditingID(element._id); openForm();}}
-              deleteSite = {() => dispatch(deleteSiteFromDB(element._id))}
             />
           )
         })

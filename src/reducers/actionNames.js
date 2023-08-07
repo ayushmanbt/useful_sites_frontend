@@ -8,3 +8,5 @@ export const REMOVE_SITE = "REMOVE_SITE"
 export const UPDATE_SITE_LIST = "UPDATE_SITE_LIST"
 // This is to change the theme of the site, from light to dark and vice versa
 export const SET_SITE_THEME = "SET_SITE_THEME"
+// This is to mark which site is being deleted
+export const MARK_DELETING_ID = "MARK_DELETING_ID"

@@ -1,4 +1,4 @@
-import {ADD_SITE, REMOVE_SITE, TOGGLE_IS_LOADING, UPDATE_SITE_LIST} from '../actionNames'
+import {ADD_SITE, MARK_DELETING_ID, REMOVE_SITE, TOGGLE_IS_LOADING, UPDATE_SITE_LIST} from '../actionNames'
 
 import {API_URL} from "../../constants";
 
@@ -35,7 +35,6 @@ export const getSitesFromOnline = () => {
 
 export const deleteSiteFromDB = (id) => {
     return (dispatch) => {
-        dispatch(removeSite(id));
         const option = {
             method: 'POST',
             body: JSON.stringify({id}),
@@ -44,9 +43,19 @@ export const deleteSiteFromDB = (id) => {
             }
         }
         fetch(`${API_URL}/sites/delete`, option)
-            .then(res => res.json())
-            .then(res => {
-                console.log(res);
+        .then(res => res.json())
+        .then(res => {
+                dispatch(setIsDeletingID(null));
+                dispatch(removeSite(id));
+                return;
             })
+    }
+}
+
+export const setIsDeletingID = (aid) => {
+    // console.log(id);
+    return {
+        type: MARK_DELETING_ID,
+        payload: aid
     }
 }

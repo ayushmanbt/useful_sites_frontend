@@ -127,6 +127,22 @@ div.center{
     font-weight: normal;
 }
 
+.deleting_site {
+    cursor: not-allowed;
+    filter: grayscale(100%);
+    pointer-events: none;
+    animation: pulsating 0.2s ease alternate infinite;
+}
+
+@keyframes pulsating {
+    0%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:0.1;
+    }
+}
+
 .btn{
     display: flex;
     justify-content: center;

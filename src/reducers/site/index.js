@@ -1,8 +1,9 @@
-import {ADD_SITE, REMOVE_SITE, TOGGLE_IS_LOADING, UPDATE_SITE_LIST} from '../actionNames'
+import {ADD_SITE, REMOVE_SITE, TOGGLE_IS_LOADING, UPDATE_SITE_LIST, MARK_DELETING_ID} from '../actionNames'
 
 const initialState = {
     siteList: [],
-    isLoading: false
+    isLoading: false,
+    isBeingDeletedID: null
 }
 
 export const siteReducer = (state = initialState, action) => {
@@ -24,6 +25,12 @@ export const siteReducer = (state = initialState, action) => {
             let nsl = state.siteList.filter(e => e._id !== action.payload );
             state = {...state, siteList: nsl}
             return state;
+
+        case MARK_DELETING_ID:
+            state = {...state, isBeingDeletedID: action.payload};
+            // console.log(state);
+            return state;
+
 
         default: return state
     }

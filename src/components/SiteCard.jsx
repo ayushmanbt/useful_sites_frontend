@@ -1,17 +1,26 @@
 import React, {useState} from 'react'
 import Icon from '@mdi/react'
 import {mdiDelete, mdiDeleteEmpty, mdiPencil, mdiLinkVariant} from '@mdi/js'
+import { useDispatch, useSelector } from 'react-redux';
 
-function SiteCard({site, editSite, deleteSite}) {
-    let {site_url, site_name, site_desc} = site;
+import { deleteSiteFromDB, setIsDeletingID } from "../reducers/site/actions";
+
+function SiteCard({site, editSite}) {
+    let {_id, site_url, site_name, site_desc} = site;
 
     const [deleteIcon, setDeleteIcon] = useState(mdiDelete)
+    const ibdid = useSelector(state => state.sites.isBeingDeletedID);
+    const dispatch = useDispatch();
 
+    const deleteSite = () => {
+        dispatch(setIsDeletingID(_id));
+        dispatch(deleteSiteFromDB(_id));
+    }
 
     // console.log(editSite);
     return (
-        <div className="site_card">
-            <h2 mb={3}>{ site_name }</h2>  
+        <div className={`site_card ${_id === ibdid && "deleting_site"}`}>
+            <h2 mb={3}>{site_name}</h2>  
             <p>{site_desc}</p>
             <div className="cta_container">
                 <a className="btn" href={site_url} target="_blank" rel="noopener noreferrer">

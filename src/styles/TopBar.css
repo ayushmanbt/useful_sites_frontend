@@ -1,7 +1,23 @@
 nav{
     padding: 15px;
+    width: 100vw;
     background: var(--secondary-bg);
-    text-align: center;
+    /* text-align: center; */
+}
+
+.nav_wrapper{
+    display: flex;
+    align-items: center;
+    max-width: 1024px;
+    justify-content: space-between;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+@media(max-width: 600px) {
+    .nav_wrapper{
+        flex-direction: column;
+    }
 }
 
 nav h1{
