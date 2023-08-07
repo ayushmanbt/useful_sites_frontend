@@ -3,12 +3,14 @@ import React from 'react'
 import Icon from '@mdi/react';
 import {mdiGithub} from '@mdi/js';
 
+import "../styles/AboutPage.css";
+
 function About() {
     return (
         <div className="container"> 
             <div className="detail_part">
                 <h2>About This App</h2>
-                <p>Useful sites is a MERN Stack based application where people can share a common list of useful URLs.</p>
+                <p>This is a MERN stack based application which demonstrates my skills with a popular frontend framework React, also a popular backend framework Express.js and a noSQL database MongoDB (although the DB is hosted private for security reasons!)</p>
             </div>
 
             <h2>Some Important Links</h2>
@@ -21,7 +23,7 @@ function About() {
                         size={0.7}
                     />
                     &nbsp;
-                    Frontend Source Code
+                    <span>Frontend Source Code</span>
                 </a>
 
                 <a href="https://github.com/AyushmanBilasThakur/useful_sites_backend" target="_blank" rel="noopener noreferrer" className="btn edit">
@@ -30,7 +32,7 @@ function About() {
                         size={0.7}
                     />
                     &nbsp;
-                    Backend Source Code
+                    <span>Backend Source Code</span>
                 </a>
             </div>
         </div>

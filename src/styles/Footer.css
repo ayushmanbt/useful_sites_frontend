@@ -1,0 +1,28 @@
+.footer{
+    display: flex;
+    background: var(--secondary-bg);
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--secondary-text); 
+    padding: 10px 20px;
+}
+
+
+.plink{
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-size: 1rem;
+    /* transition: font-size 0.3s ease-in-out; */
+}
+
+.plink:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+}

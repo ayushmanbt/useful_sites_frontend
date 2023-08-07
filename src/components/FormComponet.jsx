@@ -7,6 +7,8 @@ import {API_URL} from "../constants";
 import Icon from "@mdi/react";
 import {mdiWindowClose} from "@mdi/js"
 
+import "../styles/FormComponent.css"
+
 function FormComponet({closeForm, editingID}) {
 
     const dispatch = useDispatch()
@@ -141,11 +143,11 @@ function FormComponet({closeForm, editingID}) {
     return (
         <>
         <div 
-            className="card_holder" 
+            className="popup_holder" 
             onClick={() => closeForm()} 
         >
-            <div className="container" onClick={(e) => e.stopPropagation()}>
-                <div className="card_top">
+            <div className="popup container" onClick={(e) => e.stopPropagation()}>
+                <div className="popup_top">
                     <h1>Add a new site</h1>
                     <button className="btn del" onClick={() => closeForm()}>
                         <Icon 
@@ -159,7 +161,7 @@ function FormComponet({closeForm, editingID}) {
                         errors.map(e => {
                             return(
                             <li key={e}>
-                                {e}
+                                <div>{e}</div>
                                 <button onClick={() => deleteError(e)}>&#x2716;</button>
                             </li>
                             )
@@ -183,16 +185,14 @@ function FormComponet({closeForm, editingID}) {
                     <textarea placeholder="Google is an awesome site" name="site_desc" id="site_desc" onChange={(e) => setSiteDesc(e.target.value)} value={siteDesc}/>
                 </div>
                 <div className="form_group">
-                    <input type="submit" value={editingID === "" ? "Add Site" : "Update Site"}/>
+                    <input className='btn' type="submit" value={editingID === "" ? "Add Site" : "Update Site"}/>
                 </div>
             </form>
 
             :
             
-            <div className="container" style={{
-                textAlign: "center"
-            }}>
-                <h3>Submitting</h3>
+            <div className="container">
+                <h3 className='tcenter'>Submitting</h3>
             </div>
             }
             </div>

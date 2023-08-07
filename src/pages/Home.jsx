@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {ReactComponent as LoadingCircle} from "../assets/Loading.svg"
 
 
-import SiteCard from '../components/SiteCard';
+import SiteCard from '../components/SiteCard.jsx';
 import FormComponent from "../components/FormComponet";
 
 import Icon from '@mdi/react'
@@ -32,7 +32,9 @@ function Home() {
   const RenderedList = () => {
     if(siteState.isLoading){
       return (
-        <LoadingCircle className="loading_circle"/>
+        <div className="loading">
+          <LoadingCircle className="loading_circle"/>
+        </div>
       )
     }
     else{
@@ -70,7 +72,7 @@ function Home() {
           <RenderedList />
         </div>
         <button 
-          className="cta_button" 
+          className="btn cta_button" 
           onClick={() => isFormDisplayed? closeForm() : openForm()}
         >
           <Icon path={mdiPlusBox} size={1} rotate={isFormDisplayed ? 45 : 0}/>

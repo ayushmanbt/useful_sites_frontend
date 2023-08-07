@@ -1,0 +1,16 @@
+.container{
+    margin: 20px auto;
+    color: var(--primary-text);
+}
+
+.detail_part{
+    margin-bottom: 20px;
+}
+
+.container h2{
+    margin-bottom: 10px;
+}
+
+.cta_container a span{
+    display: inline-block;
+}

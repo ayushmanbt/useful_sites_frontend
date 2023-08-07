@@ -1,0 +1,129 @@
+.popup_holder{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dialog-backdrop-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.popup{
+    background-color: var(--card-bg);
+    color: var(--card-primary-text);
+    border-radius: 10px;
+    max-width: 450px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.popup_top{
+    padding: 10px 15px; 
+    background-color: var(--primary-bg);
+    color: var(--card-primary-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.popup_top .btn{
+    width: fit-content;
+}
+
+
+.errors{
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+.errors li{
+    color: #b33d3d;
+    font-weight: bold;
+    background-color: #ffa0a0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.errors div{
+    margin-top: 4px;
+}
+
+.errors li button{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out ;
+}
+
+.errors li button:hover{
+    color: black;
+}
+
+form.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form_group{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form_group label{
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.form_group input, textarea{
+    width: 100%;
+    padding: 5px 10px;
+    /* font-weight: bold; */
+}
+
+.form_group input::placeholder, textarea::placeholder{
+    color: #a7a7a7;
+    font-weight: normal;
+}
+
+.form_group textarea{
+    height: 60px;
+}
+
+
+.form_group input[type="submit"]{
+    outline: none;
+    border: none;
+    text-transform: uppercase;;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background 0.2s ease-in-out;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tcenter{
+    text-align: center;
+}

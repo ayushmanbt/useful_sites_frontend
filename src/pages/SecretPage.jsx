@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Sceret.css'
+import styles from '../styles/Sceret.css'
 
 function SecretPage(routerProps) {
 

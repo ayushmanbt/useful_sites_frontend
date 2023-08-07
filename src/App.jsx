@@ -1,18 +1,22 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import SecretPage from './pages/SecretPage.js';
-import TopBar from './components/TopBar.js';
-import Footer from './components/Footer.js';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import SecretPage from './pages/SecretPage.jsx';
+import TopBar from './components/TopBar.jsx';
+import Footer from './components/Footer.jsx';
+import { useSelector } from 'react-redux';
 
 function App() {
 
+  const theme = useSelector(state => state.theme.theme);
+
+
   return (
     <Router>
-      <div className="pageLayout">
+      <div className={`pageLayout ${theme}`}>
         <TopBar />
         <div className="pageContent">
           <Switch>
