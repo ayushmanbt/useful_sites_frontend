@@ -1,0 +1,1 @@
+export const API_URL = "https://useful-sites-backend.glitch.me/"

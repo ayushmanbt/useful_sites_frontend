@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+  --primary-bg-light:                   #aec9ce;
+  --primary-text-light:                 #1d1d1d;
+  --secondary-bg-light:                 #1f3b46;
+  --secondary-text-light:               #e0e0e0;
+
+  --highlight-text-light:               #e2c044;
+  --highlight-topbar-link-light:        #ffea94;
+
+  --card-bg-light:                      #fbfbfb;
+  --card-primary-text-light:            #101010;
+  --card-secondary-text-light:          #333333;
+
+  --error-bg-light:                     #ffa0a0;
+  --error-text-light:                   #b33d3d;
+
+  --primary-button-bg-light:            #1f3b46;
+  --primary-button-bg-hover-light:      #1c8b8b;
+  --primary-button-text-light:          #e0e0e0;
+
+  --secondary-button-bg-light:          #f5b031;
+  --secondary-button-bg-hover-light:    #f8ca75;
+  --secondary-button-text-light:        #0e0e0e;
+
+  --delete-button-bg-light:             #e93030;
+  --delete-button-bg-hover-light:       #860909;
+  --delete-button-text-light:           #e0e0e0;
+
+  --dialog-backdrop-color-light:        rgba(0,0,0,0.9);
+
+
+  --primary-bg-dark:                   #0e323a;
+  --primary-text-dark:                 #bcbcbc;
+  --secondary-bg-dark:                 #011118;
+  --secondary-text-dark:               #e0e0e0;
+
+  --highlight-text-dark:               #e2c044;
+  --highlight-topbar-link-dark:        #ffea94;
+
+  --card-bg-dark:                      #011118;
+  --card-primary-text-dark:            #c9c9c9;
+  --card-secondary-text-dark:          #fdff8d;
+
+  --error-bg-dark:                     #ffa0a0;
+  --error-text-dark:                   #b33d3d;
+
+  --primary-button-bg-dark:            #a499d1;
+  --primary-button-bg-hover-dark:      #d7c8ff;
+  --primary-button-text-dark:          #141414;
+
+  --secondary-button-bg-dark:          #f5b031;
+  --secondary-button-bg-hover-dark:    #f8ca75;
+  --secondary-button-text-dark:        #0e0e0e;
+
+  --delete-button-bg-dark:             #e93030;
+  --delete-button-bg-hover-dark:       #860909;
+  --delete-button-text-dark:           #e0e0e0;
+
+  --dialog-backdrop-color-dark:        rgba(0,0,0,0.9);
+}
+
+
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+

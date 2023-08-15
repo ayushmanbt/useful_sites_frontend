@@ -1,0 +1,202 @@
+
+.pageLayout.light{
+    --primary-bg: var(--primary-bg-light);
+    --primary-text: var(--primary-text-light);
+    --secondary-bg: var(--secondary-bg-light);
+    --secondary-text: var(--secondary-text-light);
+
+    --highlight-text: var(--highlight-text-light);
+    --highlight-topbar-link: var(--highlight-topbar-link-light);
+
+    --card-bg: var(--card-bg-light);
+    --card-primary-text: var(--card-primary-text-light);
+    --card-secondary-text: var(--card-secondary-text-light);
+
+    --primary-button-bg: var(--primary-button-bg-light);
+    --primary-button-bg-hover: var(--primary-button-bg-hover-light);
+    --primary-button-text: var(--primary-button-text-light);
+
+    --secondary-button-bg: var(--secondary-button-bg-light);
+    --secondary-button-bg-hover: var(--secondary-button-bg-hover-light);
+    --secondary-button-text: var(--secondary-button-text-light);
+
+    --delete-button-bg: var(--delete-button-bg-light);
+    --delete-button-bg-hover: var(--delete-button-bg-hover-light);
+    --delete-button-text: var(--delete-button-text-light);
+
+    --dialog-backdrop-color: var(--dialog-backdrop-color-light);
+}
+
+.pageLayout.dark{
+    --primary-bg: var(--primary-bg-dark);
+    --primary-text: var(--primary-text-dark);
+    --secondary-bg: var(--secondary-bg-dark);
+    --secondary-text: var(--secondary-text-dark);
+
+    --highlight-text: var(--highlight-text-dark);
+    --highlight-topbar-link: var(--highlight-topbar-link-dark);
+
+    --card-bg: var(--card-bg-dark);
+    --card-primary-text: var(--card-primary-text-dark);
+    --card-secondary-text: var(--card-secondary-text-dark);
+
+    --primary-button-bg: var(--primary-button-bg-dark);
+    --primary-button-bg-hover: var(--primary-button-bg-hover-dark);
+    --primary-button-text: var(--primary-button-text-dark);
+
+    --secondary-button-bg: var(--secondary-button-bg-dark);
+    --secondary-button-bg-hover: var(--secondary-button-bg-hover-dark);
+    --secondary-button-text: var(--secondary-button-text-dark);
+
+    --delete-button-bg: var(--delete-button-bg-dark);
+    --delete-button-bg-hover: var(--delete-button-bg-hover-dark);
+    --delete-button-text: var(--delete-button-text-dark);
+
+    --dialog-backdrop-color: var(--dialog-backdrop-color-dark);
+}
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.pageLayout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.pageContent{
+    flex-grow: 1;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.container{
+    width: 90%;
+    max-width: 724px;
+    margin: 10px auto;
+}
+
+.loading_circle{
+    width: 100px;
+    height: 100px;
+}
+
+
+div.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site_card{
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    color: var(--card-primary-text);
+    width: 100%;
+    margin: 7px 0;
+    border-radius: 5px;
+}
+
+.site_card h2{
+    /* font-weight: normal; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.site_card:first-child{
+    margin-top: 14px;
+}
+
+.site_card:last-child{
+    margin-bottom: 14px;
+}
+
+.site_card p {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.deleting_site {
+    cursor: not-allowed;
+    filter: grayscale(100%);
+    pointer-events: none;
+    animation: pulsating 0.2s ease alternate infinite;
+}
+
+@keyframes pulsating {
+    0%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:0.1;
+    }
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 5px;
+    /* max-width: 200px; */
+    text-decoration: none;
+    color: var(--primary-button-text);
+    background-color: var(--primary-button-bg);
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.btn:hover{
+    background-color: var(--primary-button-bg-hover);
+}
+
+.del{
+    background-color: var(--delete-button-bg);
+    color: var(--delete-button-text);
+}
+
+.del:hover{
+    background-color: var(--delete-button-bg-hover);
+}
+
+.edit{
+    background-color: var(--secondary-button-bg);
+    color: var(--secondary-button-text);
+}
+
+.edit:hover{
+    background-color: var(--secondary-button-bg-hover);
+}
+
+.cta_container{
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    gap: 10px;
+}
+
+.cta_container a,
+.cta_container .btn{
+    width: 100%;
+    flex: 1;
+}
+
+@media (max-width: 450px) {
+    .cta_container{
+        flex-direction: column;
+    }
+}
